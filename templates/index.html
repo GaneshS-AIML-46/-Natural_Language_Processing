@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlagiaScope — AI Plagiarism Detector</title>
+  <meta name="description" content="Upload your documents and detect plagiarism instantly using TF-IDF and Cosine Similarity." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════  HEADER  ═══════════════════ -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-icon">⬡</span>
+      <span class="logo-text">PlagiaScope</span>
+    </div>
+    <p class="header-tagline">AI-Powered Plagiarism Detection · TF-IDF + Cosine Similarity</p>
+  </div>
+</header>
+
+<!-- ═══════════════════  MAIN  ═══════════════════ -->
+<main class="main">
+
+  <!-- ── Upload Panel ── -->
+  <section class="card upload-card" id="upload-section">
+    <div class="card-header">
+      <h2 class="section-title">Upload Documents</h2>
+      <span class="badge">Step 1</span>
+    </div>
+
+    <!-- Drop Zone -->
+    <div class="drop-zone" id="drop-zone">
+      <div class="drop-icon">📂</div>
+      <p class="drop-primary">Drag &amp; drop your <strong>.txt</strong> or <strong>.md</strong> files here</p>
+      <p class="drop-secondary">or click to browse — minimum 2 files required</p>
+      <input type="file" id="file-input" multiple accept=".txt,.md" hidden />
+      <button class="btn btn-outline" id="browse-btn">Browse Files</button>
+    </div>
+
+    <!-- File List -->
+    <ul class="file-list" id="file-list"></ul>
+
+    <!-- Threshold Slider -->
+    <div class="threshold-row">
+      <label class="threshold-label">
+        Plagiarism Threshold
+        <span class="threshold-value" id="threshold-display">70%</span>
+      </label>
+      <input type="range" id="threshold-slider" min="10" max="99" value="70" step="1" class="slider" />
+      <div class="slider-hints">
+        <span>Lenient (10%)</span>
+        <span>Strict (99%)</span>
+      </div>
+    </div>
+
+    <!-- Analyze Button -->
+    <button class="btn btn-primary btn-lg" id="analyze-btn" disabled>
+      <span class="btn-icon">🔍</span> Analyze Documents
+    </button>
+
+    <!-- Error message -->
+    <div class="error-box hidden" id="error-box"></div>
+  </section>
+
+  <!-- ── Loading Overlay ── -->
+  <div class="loading-overlay hidden" id="loading-overlay">
+    <div class="loader-card">
+      <div class="spinner"></div>
+      <p class="loader-text">Analyzing documents…</p>
+      <p class="loader-sub">Building TF-IDF vectors &amp; computing similarity</p>
+    </div>
+  </div>
+
+  <!-- ═══════  RESULTS  ═══════ -->
+  <div id="results-section" class="hidden">
+
+    <!-- Stats Bar -->
+    <section class="stats-bar" id="stats-bar"></section>
+
+    <!-- Similarity Matrix -->
+    <section class="card" id="matrix-section">
+      <div class="card-header">
+        <h2 class="section-title">Similarity Matrix</h2>
+        <span class="badge badge-info">Pairwise scores</span>
+      </div>
+      <div class="matrix-wrapper" id="matrix-wrapper"></div>
+    </section>
+
+    <!-- Flagged Pairs -->
+    <section class="card" id="flagged-section">
+      <div class="card-header">
+        <h2 class="section-title">Flagged Pairs</h2>
+        <span class="badge badge-danger" id="flagged-badge">0 pairs</span>
+      </div>
+      <div id="flagged-list"></div>
+    </section>
+
+    <!-- Sentence Comparison -->
+    <section class="card hidden" id="sentence-section">
+      <div class="card-header">
+        <h2 class="section-title">Sentence-Level Analysis</h2>
+        <span class="badge badge-warning">Top matched pair</span>
+      </div>
+      <p class="sentence-intro" id="sentence-intro"></p>
+      <div id="sentence-list"></div>
+    </section>
+
+    <!-- Heatmap -->
+    <section class="card" id="heatmap-section">
+      <div class="card-header">
+        <h2 class="section-title">Similarity Heatmap</h2>
+        <button class="btn btn-outline btn-sm" id="download-heatmap-btn">⬇ Download</button>
+      </div>
+      <div class="heatmap-wrapper">
+        <img id="heatmap-img" src="" alt="Similarity Heatmap" class="heatmap-img" />
+      </div>
+    </section>
+
+    <!-- New Analysis -->
+    <div class="reset-row">
+      <button class="btn btn-outline btn-lg" id="reset-btn">↩ New Analysis</button>
+    </div>
+
+  </div><!-- /results-section -->
+
+</main>
+
+<!-- ═══════════════════  FOOTER  ═══════════════════ -->
+<footer class="footer">
+  <p>PlagiaScope · TF-IDF + Cosine Similarity · Built with Python &amp; Flask</p>
+</footer>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

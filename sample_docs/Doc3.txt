@@ -1,0 +1,11 @@
+Machine learning is a core area of artificial intelligence that focuses on building systems capable of learning from data and improving performance over time without explicit programming. It is widely used in applications such as recommendation systems, fraud detection, and predictive analytics.
+
+Supervised learning is one of the most common approaches in machine learning, where models are trained using labeled data. Algorithms such as linear regression, decision trees, and support vector machines are widely used in this approach. In contrast, unsupervised learning deals with unlabeled data and aims to find hidden patterns or structures within it.
+
+Data preprocessing is a crucial step in any machine learning pipeline. It involves handling missing values, scaling features, encoding categorical variables, and splitting datasets into training and testing sets. Proper preprocessing ensures better model performance and accuracy.
+
+Feature engineering is another important aspect of machine learning. It involves selecting and transforming variables to improve model performance. Techniques such as normalization, dimensionality reduction, and feature selection are commonly used.
+
+Evaluation metrics such as accuracy, precision, recall, and F1-score are used to assess model performance. Choosing the right metric depends on the problem being solved. For example, in imbalanced datasets, accuracy alone may not be sufficient.
+
+With the growth of big data, machine learning continues to evolve rapidly. Advanced techniques like deep learning and neural networks are being used to solve complex problems in areas such as computer vision, speech recognition, and natural language processing.

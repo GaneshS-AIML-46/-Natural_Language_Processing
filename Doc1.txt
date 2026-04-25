@@ -1,0 +1,11 @@
+Natural Language Processing (NLP) is an important branch of artificial intelligence that focuses on enabling computers to understand, interpret, and generate human language. It plays a significant role in modern applications such as chatbots, translation systems, sentiment analysis, and search engines. By combining computational linguistics with machine learning, NLP allows machines to process large amounts of textual data efficiently.
+
+One of the key challenges in NLP is converting unstructured text into a structured format that machines can understand. This involves several preprocessing steps such as tokenization, stopword removal, stemming, and lemmatization. These steps help clean and standardize the text before applying further analysis.
+
+TF-IDF, which stands for Term Frequency–Inverse Document Frequency, is a statistical technique widely used in text mining and information retrieval. It helps determine how important a word is within a document relative to a collection of documents. Words that appear frequently in a document but rarely across other documents are given higher importance scores.
+
+Cosine similarity is another fundamental concept used in NLP to measure the similarity between two documents. It calculates the cosine of the angle between two vectors representing the documents in a multi-dimensional space. A value closer to 1 indicates high similarity, while a value closer to 0 indicates low similarity.
+
+Plagiarism detection systems often rely on TF-IDF and cosine similarity to compare documents. By converting text into vector representations, these systems can identify overlapping content and measure similarity scores. This approach is widely used in academic institutions and content platforms to ensure originality.
+
+In recent years, NLP has evolved significantly with the introduction of deep learning techniques. However, traditional methods like TF-IDF remain relevant due to their simplicity, efficiency, and interpretability. They are especially useful for small to medium-scale applications where computational resources are limited.

@@ -1,0 +1,11 @@
+Natural Language Processing is a major area of artificial intelligence that aims to enable computers to understand, interpret, and generate human language effectively. It is widely used in applications such as chatbots, machine translation, sentiment analysis, and search engines. By integrating computational linguistics and machine learning, NLP systems can process large volumes of textual information efficiently.
+
+A major challenge in NLP involves transforming unstructured text into a structured format that machines can analyze. This requires preprocessing techniques like tokenization, removing stopwords, stemming, and lemmatization. These steps are essential for cleaning and preparing text data for further processing.
+
+TF-IDF (Term Frequency–Inverse Document Frequency) is a commonly used statistical method in text mining and information retrieval. It evaluates how important a word is in a document compared to a collection of documents. Words that occur frequently in one document but not in others receive higher importance scores.
+
+Cosine similarity is widely used to measure how similar two text documents are. It computes the cosine of the angle between vector representations of documents in a multi-dimensional space. A value near 1 indicates strong similarity, while a value near 0 indicates weak similarity.
+
+Plagiarism detection tools frequently use TF-IDF along with cosine similarity to compare documents. By transforming text into vectors, these systems can detect overlapping content and calculate similarity scores. This technique is commonly used in academic and professional environments to maintain originality.
+
+Although modern NLP has advanced with deep learning methods, traditional approaches like TF-IDF are still valuable because they are simple, efficient, and easy to interpret. They are particularly useful for smaller applications where computational resources are limited.
