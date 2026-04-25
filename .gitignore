@@ -1,0 +1,14 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Uploads folder
+uploads/
+
+# Virtual environment
+venv/
+.venv/
+env/
+.env
