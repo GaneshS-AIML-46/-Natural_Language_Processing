@@ -9,3 +9,6 @@ Feature engineering is another important aspect of machine learning. It involves
 Evaluation metrics such as accuracy, precision, recall, and F1-score are used to assess model performance. Choosing the right metric depends on the problem being solved. For example, in imbalanced datasets, accuracy alone may not be sufficient.
 
 With the growth of big data, machine learning continues to evolve rapidly. Advanced techniques like deep learning and neural networks are being used to solve complex problems in areas such as computer vision, speech recognition, and natural language processing.
+
+
+document 3 contents
